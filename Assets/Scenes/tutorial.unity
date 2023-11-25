@@ -3476,9 +3476,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 558498788}
     - target: {fileID: 4434734314811351, guid: a6ba945a2e4d9a642845060b3016a90f, type: 3}
+      propertyPath: blueFloor
+      value: 
+      objectReference: {fileID: 1491147408}
+    - target: {fileID: 4434734314811351, guid: a6ba945a2e4d9a642845060b3016a90f, type: 3}
       propertyPath: redCollision
       value: 
       objectReference: {fileID: 1695946733}
+    - target: {fileID: 4434734314811351, guid: a6ba945a2e4d9a642845060b3016a90f, type: 3}
+      propertyPath: blueCollision
+      value: 
+      objectReference: {fileID: 1570638298}
     - target: {fileID: 297669510043992491, guid: a6ba945a2e4d9a642845060b3016a90f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
