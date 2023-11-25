@@ -10,11 +10,6 @@ public class Interactables : MonoBehaviour
     public UnityEvent interactAction;
     public GameObject outline;
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (isInRange)

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class RobotMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    public Checkpoints checkpoint;
+    private Vector3 respawnPoint;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -46,6 +49,17 @@ public class RobotMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        respawnPoint = GameObject.Find("Robot").GetComponent<RobotMovement>().respawnPoint;
+        Debug.Log(respawnPoint.ToString());
+
+        if (collision.tag == "Death")
+        {
+            
         }
     }
 }
