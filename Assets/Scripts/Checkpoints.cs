@@ -13,11 +13,9 @@ public class Checkpoints : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Checkpoint hit");
             flagHit.SetActive(true);
             flagNotHit.SetActive(false);
             respawnPoint = transform.position;
-            Debug.Log(respawnPoint.ToString());
         }
     }
 }
