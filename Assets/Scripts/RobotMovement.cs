@@ -36,20 +36,33 @@ public class RobotMovement : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f); 
+        }
 
-            
+        if(Input.GetButtonDown("Horizontal") && IsGrounded())
+        {
+            AudioManager.Instance.playSFX("MoveBricks");
+            AudioManager.Instance.sfxSource.loop = true;
+        }
+        if(Input.GetButtonUp("Horizontal") && IsGrounded())
+        {
+            Invoke("moveStop", 0.25F);
         }
         if (IsGrounded())
         {
             animator.SetBool("IsJumping", false);
-            AudioManager.Instance.playSFX("Land");
         }
         else
         {
             animator.SetBool("IsJumping", true);
         }
         Flip();
+    }
+
+    public void moveStop()
+    {
+        AudioManager.Instance.sfxSource.Stop();
+        AudioManager.Instance.sfxSource.loop = false;
     }
 
     private bool IsGrounded()
