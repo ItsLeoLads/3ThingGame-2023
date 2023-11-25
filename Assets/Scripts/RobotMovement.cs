@@ -11,6 +11,7 @@ public class RobotMovement : MonoBehaviour
     private bool isFacingRight = true;
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
+    public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -19,6 +20,8 @@ public class RobotMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
