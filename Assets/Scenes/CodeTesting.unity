@@ -853,6 +853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableBox
       objectReference: {fileID: 0}
+    - target: {fileID: 8090033155482632203, guid: 56548c2dd5181ae4ba544219163a8bf8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
