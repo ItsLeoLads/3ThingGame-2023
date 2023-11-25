@@ -6,8 +6,8 @@ using UnityEngine;
 public class RobotMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float speed = 3.5f;
+    private float jumpingPower = 7;
     private bool isFacingRight = true;
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
