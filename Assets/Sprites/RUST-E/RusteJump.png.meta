@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c771bf0a8fa42f4b80130dc32b66a17
-      internalID: 297162006
+      spriteID: 719d92519d45cd947a27cf3beee081c9
+      internalID: -822193689
       vertices: []
       indices: 
       edges: []
@@ -147,9 +147,9 @@ TextureImporter:
       name: RusteJump_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 31
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 628bae4ce1b261d419e718ea0b34f4ee
-      internalID: -1024575715
+      spriteID: 5fdc35144a410514b9a27136c601f8c9
+      internalID: 1673078702
       vertices: []
       indices: 
       edges: []
@@ -168,9 +168,9 @@ TextureImporter:
       name: RusteJump_2
       rect:
         serializedVersion: 2
-        x: 56
+        x: 62
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fec7ac77e58c3fe489466c0d5bd35968
-      internalID: -115304200
+      spriteID: 5637e4a679d877c4c9614f28cda75c53
+      internalID: 1103949158
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
       name: RusteJump_3
       rect:
         serializedVersion: 2
-        x: 84
+        x: 93
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c5609fdb68b4cc4eb2763b8248ba0b3
-      internalID: 927290149
+      spriteID: 0c84a5e041ad6e34abf5a8d69cd99bf3
+      internalID: 1425061551
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RusteJump_0: 297162006
-      RusteJump_1: -1024575715
-      RusteJump_2: -115304200
-      RusteJump_3: 927290149
+      RusteJump_0: -822193689
+      RusteJump_1: 1673078702
+      RusteJump_2: 1103949158
+      RusteJump_3: 1425061551
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

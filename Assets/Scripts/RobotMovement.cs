@@ -11,6 +11,7 @@ public class RobotMovement : MonoBehaviour
     private bool isFacingRight = true;
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
+    public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -20,6 +21,8 @@ public class RobotMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
@@ -28,8 +31,17 @@ public class RobotMovement : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
 
+            
+        }
+        if (IsGrounded())
+        {
+            animator.SetBool("IsJumping", false);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", true);
+        }
         Flip();
     }
 
