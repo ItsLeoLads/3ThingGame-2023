@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
+        width: 30
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ec3c43d498f344b8df1b5843368142
-      internalID: 121461148
+      spriteID: 70d45949d8859d74f9e9feb6bd97487b
+      internalID: 1976546454
       vertices: []
       indices: 
       edges: []
@@ -147,9 +147,9 @@ TextureImporter:
       name: RusteIdle_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 30
         y: 0
-        width: 28
+        width: 30
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3209496826ac4242a1f3846fcf1c8a1
-      internalID: -1448900559
+      spriteID: eac9017b7f6858747931b2f55b7b7f1d
+      internalID: 1289086663
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RusteIdle_0: 121461148
-      RusteIdle_1: -1448900559
+      RusteIdle_0: 1976546454
+      RusteIdle_1: 1289086663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
