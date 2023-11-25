@@ -31,6 +31,7 @@ public class RobotMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            AudioManager.Instance.playSFX("Jump");
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -42,6 +43,7 @@ public class RobotMovement : MonoBehaviour
         if (IsGrounded())
         {
             animator.SetBool("IsJumping", false);
+            AudioManager.Instance.playSFX("Land");
         }
         else
         {
