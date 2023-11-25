@@ -16,6 +16,11 @@ public class RobotMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private GameObject redFloor;
+    [SerializeField] private GameObject redCollision;
+
+    [SerializeField] private GameObject blueFloor;
+    [SerializeField] private GameObject blueCollision;
 
     private void Update()
     {
@@ -73,6 +78,16 @@ public class RobotMovement : MonoBehaviour
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 
             transform.position = respawnPoint;
+        }
+        else if (collision.tag == "Red")
+        {
+            redFloor.SetActive(true);
+            redCollision.SetActive(false);
+        }
+        else if (collision.tag == "Blue")
+        {
+            blueFloor.SetActive(true);
+            blueCollision.SetActive(false);
         }
     }
 }
