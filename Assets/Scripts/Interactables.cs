@@ -26,7 +26,6 @@ public class Interactables : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Robot is in range");
             outline.SetActive(true);
         }
     }
@@ -36,7 +35,6 @@ public class Interactables : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Robot is not in range");
             outline.SetActive(false);
         }
     }

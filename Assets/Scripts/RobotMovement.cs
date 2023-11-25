@@ -54,12 +54,11 @@ public class RobotMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        respawnPoint = GameObject.Find("Robot").GetComponent<RobotMovement>().respawnPoint;
-        Debug.Log(respawnPoint.ToString());
-
         if (collision.tag == "Death")
         {
-            
+            respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
+
+            transform.position = respawnPoint;
         }
     }
 }
