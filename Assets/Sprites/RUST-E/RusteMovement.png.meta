@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d1a17dae3d07e648b821de5bd491c07
+guid: b1d4333532b0fe2488dcd35dead54f21
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e42655885a12e6429a4a4a16dde7944
-      internalID: 251285289
+      spriteID: 10981c1c5663ac94da1763ce82aa4fc7
+      internalID: -1466314615
       vertices: []
       indices: 
       edges: []
@@ -147,9 +147,9 @@ TextureImporter:
       name: RusteMovement_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 31
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6908749d776839c4191339449f4691e9
-      internalID: -962641651
+      spriteID: af0b4c022574b8f44a3748d8b05eea24
+      internalID: -1880183041
       vertices: []
       indices: 
       edges: []
@@ -168,9 +168,9 @@ TextureImporter:
       name: RusteMovement_2
       rect:
         serializedVersion: 2
-        x: 56
+        x: 62
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06910bd2ef46ce940999bc19ce494c84
-      internalID: 1177255154
+      spriteID: 773fc7e1ce7a7e046bc828e9c9bc0596
+      internalID: -215742283
       vertices: []
       indices: 
       edges: []
@@ -189,9 +189,9 @@ TextureImporter:
       name: RusteMovement_3
       rect:
         serializedVersion: 2
-        x: 84
+        x: 93
         y: 0
-        width: 28
+        width: 31
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ba7fd24dbb98034186be2b3a2914474
-      internalID: -1197172668
+      spriteID: 98a9a9c4e5dc2ee45a20b3178adb0109
+      internalID: 171809578
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RusteMovement_0: 251285289
-      RusteMovement_1: -962641651
-      RusteMovement_2: 1177255154
-      RusteMovement_3: -1197172668
+      RusteMovement_0: -1466314615
+      RusteMovement_1: -1880183041
+      RusteMovement_2: -215742283
+      RusteMovement_3: 171809578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
