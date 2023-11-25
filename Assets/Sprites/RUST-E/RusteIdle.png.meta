@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d1a17dae3d07e648b821de5bd491c07
+guid: a809787d358b6d647ba4a2ef5705197c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RusteMovement_0
+      name: RusteIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e42655885a12e6429a4a4a16dde7944
-      internalID: 251285289
+      spriteID: a4ec3c43d498f344b8df1b5843368142
+      internalID: 121461148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RusteMovement_1
+      name: RusteIdle_1
       rect:
         serializedVersion: 2
         x: 28
@@ -158,50 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6908749d776839c4191339449f4691e9
-      internalID: -962641651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RusteMovement_2
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 0
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06910bd2ef46ce940999bc19ce494c84
-      internalID: 1177255154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RusteMovement_3
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 28
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ba7fd24dbb98034186be2b3a2914474
-      internalID: -1197172668
+      spriteID: c3209496826ac4242a1f3846fcf1c8a1
+      internalID: -1448900559
       vertices: []
       indices: 
       edges: []
@@ -217,10 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RusteMovement_0: 251285289
-      RusteMovement_1: -962641651
-      RusteMovement_2: 1177255154
-      RusteMovement_3: -1197172668
+      RusteIdle_0: 121461148
+      RusteIdle_1: -1448900559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
