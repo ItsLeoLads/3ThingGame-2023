@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RobotMovement : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class RobotMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             AudioManager.Instance.playSFX("Jump");
+            Invoke("Landing", 1f);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -41,8 +43,17 @@ public class RobotMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Horizontal") && IsGrounded())
         {
-            AudioManager.Instance.playSFX("MoveBricks");
-            AudioManager.Instance.sfxSource.loop = true;
+            if(SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "level1")
+            {
+                AudioManager.Instance.playSFX("MoveBricks");
+                AudioManager.Instance.sfxSource.loop = true;
+            }
+            else
+            {
+                AudioManager.Instance.playSFX("MoveForest");
+                AudioManager.Instance.sfxSource.loop = true;
+            }
+            
         }
         if(Input.GetButtonUp("Horizontal") && IsGrounded())
         {
@@ -59,6 +70,10 @@ public class RobotMovement : MonoBehaviour
         Flip();
     }
 
+    public void Landing()
+    {
+        AudioManager.Instance.landAudio();
+    }
     public void moveStop()
     {
         AudioManager.Instance.sfxSource.Stop();

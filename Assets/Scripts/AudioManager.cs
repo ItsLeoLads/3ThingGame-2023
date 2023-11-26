@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -23,7 +24,19 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        playMusic("MainTheme");
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            playMusic("MainTheme");
+        }
+        else if(SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            playMusic("CityLevel");
+        }
+        else if(SceneManager.GetActiveScene().name == "level2")
+        {
+            playMusic("ForestLevel");
+        }
+        
     }
 
     public void playMusic(string name)
@@ -54,7 +67,20 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(audio.clip);
         }
     }
+    
+    public void landAudio()
+    {
+        Audio audio = Array.Find(sfxAudio, x => x.name == "Land");
 
+        if( audio == null)
+        {
+            Debug.Log("Audio not found!");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(audio.clip);
+        }
+    }
 
     public void OnButtonePress()
     {
