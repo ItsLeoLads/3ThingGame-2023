@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level1.unity
     guid: 8c24e28e5ecd937449376a20534dcf5e
   - enabled: 1
+    path: Assets/Scenes/cityForestTransition.unity
+    guid: 259832abaadd5854b9e13f0cefcea4a2
+  - enabled: 1
     path: Assets/Scenes/level2.unity
     guid: 84cc6ed214332864fa6444371f95015c
   - enabled: 0
