@@ -13,7 +13,6 @@ public class RobotMovement : MonoBehaviour
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
     public Animator animator;
-    public int energyBars = 3;
     public gameOver GameOverHandler;
 
 
@@ -25,15 +24,6 @@ public class RobotMovement : MonoBehaviour
 
     [SerializeField] private GameObject blueFloor;
     [SerializeField] private GameObject blueCollision;
-    private void Awake()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    
-    void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
-    {
-        energyBars = 3;
-    }
 
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
@@ -145,22 +135,18 @@ public class RobotMovement : MonoBehaviour
         
         if (collision.tag == "Death")
         {
-            energyBars --;
+            
             //Debug.Log("1");
             //AudioManager.Instance.playSFX("ShortCircuit");
             Debug.Log("2");
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 
-            if (energyBars <= 0)
-            {
-                gameOver();
-            }
-            else
-            {
-                respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
+            
+            
+            respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 
-                transform.position = respawnPoint;
-            }
+            transform.position = respawnPoint;
+            
         }
         if (collision.tag == "horizontal")
         {
@@ -175,9 +161,5 @@ public class RobotMovement : MonoBehaviour
         {
             eKey.SetActive(false);
         }
-    }
-    public void gameOver()
-    {
-        GameOverHandler.Setup();
     }
 }
