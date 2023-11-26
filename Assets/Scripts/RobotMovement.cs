@@ -8,7 +8,7 @@ public class RobotMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 3.5f;
-    private float jumpingPower = 9;
+    private float jumpingPower = 8;
     private bool isFacingRight = true;
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
