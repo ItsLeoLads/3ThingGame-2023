@@ -26,6 +26,11 @@ public class RobotMovement : MonoBehaviour
     [SerializeField] private GameObject blueFloor;
     [SerializeField] private GameObject blueCollision;
 
+    [SerializeField] private GameObject leftArrow;
+    [SerializeField] private GameObject rightArrow;
+    [SerializeField] private GameObject upArrow;
+    [SerializeField] private GameObject eKey;
+
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -145,6 +150,19 @@ public class RobotMovement : MonoBehaviour
 
                 transform.position = respawnPoint;
             }
+        }
+        if (collision.tag == "horizontal")
+        {
+            leftArrow.SetActive(false);
+            rightArrow.SetActive(false);
+        }
+        if (collision.tag == "jump")
+        {
+            upArrow.SetActive(false);
+        }
+        if (collision.tag == "E")
+        {
+            eKey.SetActive(false);
         }
     }
     public void gameOver()

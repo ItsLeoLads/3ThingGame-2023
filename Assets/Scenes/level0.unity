@@ -2055,6 +2055,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2133872311}
     - target: {fileID: 4434734314811351, guid: a6ba945a2e4d9a642845060b3016a90f, type: 3}
+      propertyPath: upArrow
+      value: 
+      objectReference: {fileID: 353419419}
+    - target: {fileID: 4434734314811351, guid: a6ba945a2e4d9a642845060b3016a90f, type: 3}
       propertyPath: redFloor
       value: 
       objectReference: {fileID: 1809967779}
@@ -2412,7 +2416,7 @@ GameObject:
   - component: {fileID: 353419421}
   m_Layer: 0
   m_Name: UpArrow
-  m_TagString: Untagged
+  m_TagString: jump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3035,6 +3039,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1893801293}
   - {fileID: 1185970141}
   m_Father: {fileID: 773407712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3128,7 +3133,7 @@ GameObject:
   - component: {fileID: 513891478}
   m_Layer: 0
   m_Name: LeftArrow
-  m_TagString: Untagged
+  m_TagString: horizontal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3338,7 +3343,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 477602849}
     m_Modifications:
     - target: {fileID: 318934922288600110, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_Sprite
@@ -3361,16 +3366,24 @@ PrefabInstance:
       value: Checkpoint
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 3.5885
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.01
+      value: 2.8208084
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -1.0830828
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3378,15 +3391,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3865,7 +3878,7 @@ GameObject:
   - component: {fileID: 850487382}
   m_Layer: 0
   m_Name: RightArrow
-  m_TagString: Untagged
+  m_TagString: horizontal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6391,6 +6404,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &1893801293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4757873414280400463, guid: ed3401d98e8b6584294d26099f5df173, type: 3}
+  m_PrefabInstance: {fileID: 667304342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1922572369
 GameObject:
   m_ObjectHideFlags: 0
@@ -7177,7 +7195,7 @@ GameObject:
   - component: {fileID: 2133872313}
   m_Layer: 0
   m_Name: EKey
-  m_TagString: Untagged
+  m_TagString: E
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7275,7 +7293,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 197574288}
-  - {fileID: 667304342}
   - {fileID: 1739612003}
   - {fileID: 773407712}
   - {fileID: 1229477476}
