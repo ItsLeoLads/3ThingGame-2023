@@ -685,29 +685,41 @@ MonoBehaviour:
   musicAudio:
   - name: MainTheme
     clip: {fileID: 8300000, guid: e0b2d952a0b306c4fbb2c04a6ff66499, type: 3}
+    enabled: 0
   - name: CityTheme
     clip: {fileID: 8300000, guid: f04cba0351b927445b3b61a076f853a8, type: 3}
+    enabled: 0
   - name: ForestLevel
     clip: {fileID: 8300000, guid: 49fe93429b3793c4c8082ab99b6306b2, type: 3}
+    enabled: 0
   sfxAudio:
   - name: Crash-1
     clip: {fileID: 8300000, guid: 64d9837a85aa26f42a24ee155eebd776, type: 3}
+    enabled: 0
   - name: Crash-2
     clip: {fileID: 8300000, guid: c261d935c9f94904da4fa61112b90be3, type: 3}
+    enabled: 0
   - name: GameOver
     clip: {fileID: 8300000, guid: f7066bc175489394cb74730417311d9d, type: 3}
+    enabled: 0
   - name: Jump
     clip: {fileID: 8300000, guid: e0c2055c377b97d4a9261bed3737ceda, type: 3}
+    enabled: 0
   - name: Lifting
     clip: {fileID: 8300000, guid: d7c1a04ebe5389a43ae9372536e3dd1c, type: 3}
+    enabled: 0
   - name: MoveBricks
     clip: {fileID: 8300000, guid: 864a06b145809d64795f47ab03d192d7, type: 3}
+    enabled: 0
   - name: MoveForest
     clip: {fileID: 8300000, guid: c92243eae5bc2cf4d95db354d76a3caf, type: 3}
+    enabled: 0
   - name: Land
     clip: {fileID: 8300000, guid: c38163b15c852434eb62c82d23457617, type: 3}
+    enabled: 0
   - name: ShortCircuit
     clip: {fileID: 8300000, guid: 34b6edd61da101c45b88abef990813f8, type: 3}
+    enabled: 0
   musicSource: {fileID: 1895307}
   sfxSource: {fileID: 2075871479}
 --- !u!4 &903535174
