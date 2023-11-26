@@ -13,6 +13,7 @@ public class RobotMovement : MonoBehaviour
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
     public Animator animator;
+    public gameController controller;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -126,9 +127,14 @@ public class RobotMovement : MonoBehaviour
         //currently doesn't work but with a delayed death / death screen it should resolve issue
         if (collision.tag == "Death")
         {
-            respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
-
-            transform.position = respawnPoint;
+            controller.GameOver();
         }
+    }
+
+    public void respawn()
+    {
+        gameObject.SetActive(false);
+        respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
+        transform.position = respawnPoint;
     }
 }
