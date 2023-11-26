@@ -7,4 +7,5 @@ public class Audio
 {
     public string name;
     public AudioClip clip;
+    public bool enabled;
 }

@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.VisualScripting.Member;
 
 public class AudioManager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Start()
@@ -28,15 +31,6 @@ public class AudioManager : MonoBehaviour
         {
             playMusic("MainTheme");
         }
-        else if(SceneManager.GetActiveScene().name == "Tutorial")
-        {
-            playMusic("CityLevel");
-        }
-        else if(SceneManager.GetActiveScene().name == "level2")
-        {
-            playMusic("ForestLevel");
-        }
-        
     }
 
     public void playMusic(string name)
@@ -52,6 +46,39 @@ public class AudioManager : MonoBehaviour
             musicSource.clip = audio.clip;
             musicSource.Play();
         }
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
+    {
+
+        Audio audio = new Audio();
+
+        switch (scene.name)
+        {
+            case "tutorial":
+                audio = Array.Find(musicAudio, x => x.name == "CityTheme");
+                musicSource.clip = audio.clip;
+                musicSource.Play();
+                break;
+            case "level1":
+                audio = Array.Find(musicAudio, x => x.name == "CityTheme");
+                musicSource.clip = audio.clip;
+                musicSource.Play();
+                break;
+            default:
+                audio = Array.Find(musicAudio, x => x.name == "MainTheme");
+                musicSource.clip = audio.clip;
+                musicSource.Play();
+                break;
+        }
+
+        if (musicSource.clip != audio.clip)
+        {
+            audio.enabled = false;
+            audio.clip = musicSource.clip;
+            audio.enabled = true;
+        }
+
     }
 
     public void playSFX(string name)
