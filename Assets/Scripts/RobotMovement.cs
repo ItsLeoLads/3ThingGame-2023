@@ -16,6 +16,7 @@ public class RobotMovement : MonoBehaviour
     public int energyBars = 3;
     public gameOver GameOverHandler;
 
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -24,10 +25,6 @@ public class RobotMovement : MonoBehaviour
 
     [SerializeField] private GameObject blueFloor;
     [SerializeField] private GameObject blueCollision;
-
-    [SerializeField] private GameObject leftArrow;
-    [SerializeField] private GameObject rightArrow;
-    [SerializeField] private GameObject jumpArrow;
 
     private void Update()
     {
@@ -148,15 +145,6 @@ public class RobotMovement : MonoBehaviour
 
                 transform.position = respawnPoint;
             }
-        }
-        if (collision.tag == "horizontal")
-        {
-            rightArrow.SetActive(false);
-            leftArrow.SetActive(false);
-        }
-        if (collision.tag == "jump")
-        {
-           jumpArrow.SetActive(false);
         }
     }
     public void gameOver()
