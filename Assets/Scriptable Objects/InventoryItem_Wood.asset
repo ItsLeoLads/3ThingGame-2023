@@ -15,4 +15,4 @@ MonoBehaviour:
   id: InventoryItem_Wood
   displayName: Wood
   icon: {fileID: 21300000, guid: 900b0b80055c4bd4a8c551fe4ee13042, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 8598108379453459367, guid: f3dfc93de685f7248a4e99655cf3be97, type: 3}

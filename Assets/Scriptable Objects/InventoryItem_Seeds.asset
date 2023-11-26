@@ -15,4 +15,4 @@ MonoBehaviour:
   id: InventoryItem_Seeds
   displayName: Seeds
   icon: {fileID: 21300000, guid: 90a8ea7a846dec447ae6de9d7f13a3fc, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 6736360920566070657, guid: 6f12257b9d171434c8d88c56306a1403, type: 3}
