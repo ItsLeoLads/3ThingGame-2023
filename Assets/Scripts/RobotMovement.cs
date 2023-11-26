@@ -38,12 +38,12 @@ public class RobotMovement : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f); 
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
-        if(Input.GetButtonDown("Horizontal") && IsGrounded())
+        if (Input.GetButtonDown("Horizontal") && IsGrounded())
         {
-            if(SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "level1")
+            if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "level1")
             {
                 AudioManager.Instance.playSFX("MoveBricks");
                 AudioManager.Instance.sfxSource.loop = true;
@@ -53,9 +53,9 @@ public class RobotMovement : MonoBehaviour
                 AudioManager.Instance.playSFX("MoveForest");
                 AudioManager.Instance.sfxSource.loop = true;
             }
-            
+
         }
-        if(Input.GetButtonUp("Horizontal") && IsGrounded())
+        if (Input.GetButtonUp("Horizontal") && IsGrounded())
         {
             Invoke("moveStop", 0.25F);
         }
@@ -103,21 +103,32 @@ public class RobotMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Red")
+        {
+            redFloor.SetActive(true);
+            redCollision.SetActive(false);
+        }
+        else
+        {
+            redFloor.SetActive(false);
+            redCollision.SetActive(true);
+        }
+        if (collision.tag == "Blue")
+        {
+            blueFloor.SetActive(true);
+            blueCollision.SetActive(false);
+        }
+        else
+        {
+            blueFloor.SetActive(false);
+            blueCollision.SetActive(true);
+        }
+        //currently doesn't work but with a delayed death / death screen it should resolve issue
         if (collision.tag == "Death")
         {
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 
             transform.position = respawnPoint;
-        }
-        else if (collision.tag == "Red")
-        {
-            redFloor.SetActive(true);
-            redCollision.SetActive(false);
-        }
-        else if (collision.tag == "Blue")
-        {
-            blueFloor.SetActive(true);
-            blueCollision.SetActive(false);
         }
     }
 }
