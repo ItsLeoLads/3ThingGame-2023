@@ -55,7 +55,7 @@ public class AudioManager : MonoBehaviour
 
         switch (scene.name)
         {
-            case "tutorial":
+            case "level0":
                 audio = Array.Find(musicAudio, x => x.name == "CityTheme");
                 musicSource.clip = audio.clip;
                 musicSource.Play();
@@ -63,6 +63,10 @@ public class AudioManager : MonoBehaviour
             case "level1":
                 audio = Array.Find(musicAudio, x => x.name == "CityTheme");
                 musicSource.clip = audio.clip;
+                musicSource.Play();
+                break;
+            case "level2":
+                audio = Array.Find(musicAudio, x => x.name == "ForestTheme");
                 musicSource.Play();
                 break;
             default:
