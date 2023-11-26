@@ -25,6 +25,15 @@ public class RobotMovement : MonoBehaviour
 
     [SerializeField] private GameObject blueFloor;
     [SerializeField] private GameObject blueCollision;
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    
+    void OnSceneLoaded(Scene scene, LoadSceneMode sceneMode)
+    {
+        energyBars = 3;
+    }
 
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
@@ -137,6 +146,7 @@ public class RobotMovement : MonoBehaviour
         if (collision.tag == "Death")
         {
             energyBars --;
+            AudioManager.Instance.playSFX("ShortCircuit");
             Debug.Log("2");
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 
