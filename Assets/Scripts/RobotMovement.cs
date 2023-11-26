@@ -146,7 +146,8 @@ public class RobotMovement : MonoBehaviour
         if (collision.tag == "Death")
         {
             energyBars --;
-            AudioManager.Instance.playSFX("ShortCircuit");
+            //Debug.Log("1");
+            //AudioManager.Instance.playSFX("ShortCircuit");
             Debug.Log("2");
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 

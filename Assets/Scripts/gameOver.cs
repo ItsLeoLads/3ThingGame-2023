@@ -17,23 +17,12 @@ public class gameOver : MonoBehaviour
     public void Setup()
     {
         gameObject.SetActive(true);
-        Invoke("PauseGame", 1);
-    }
-
-    void PauseGame()
-    {
-        Time.timeScale = 0;
-    }
-    void ResumeGame()
-    {
-        Time.timeScale = 1;
     }
 
     public void restartButton()
     {
         SceneManager.LoadScene("level0");
         gameObject.SetActive(false);
-        ResumeGame();
     }
 
     public void exitButton()
