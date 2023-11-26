@@ -31,7 +31,7 @@ public class gameOver : MonoBehaviour
 
     public void restartButton()
     {
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene("level0");
         gameObject.SetActive(false);
         ResumeGame();
     }
