@@ -7,6 +7,9 @@ TagManager:
   - Death
   - Red
   - Blue
+  - horizontal
+  - jump
+  - E
   layers:
   - Default
   - TransparentFX

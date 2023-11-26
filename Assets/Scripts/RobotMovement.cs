@@ -23,6 +23,10 @@ public class RobotMovement : MonoBehaviour
     [SerializeField] private GameObject blueFloor;
     [SerializeField] private GameObject blueCollision;
 
+    [SerializeField] private GameObject leftArrow;
+    [SerializeField] private GameObject rightArrow;
+    [SerializeField] private GameObject jumpArrow;
+
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -129,6 +133,15 @@ public class RobotMovement : MonoBehaviour
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
 
             transform.position = respawnPoint;
+        }
+        if (collision.tag == "horizontal")
+        {
+            rightArrow.SetActive(false);
+            leftArrow.SetActive(false);
+        }
+        if (collision.tag == "jump")
+        {
+           jumpArrow.SetActive(false);
         }
     }
 }
