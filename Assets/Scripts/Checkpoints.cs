@@ -16,6 +16,7 @@ public class Checkpoints : MonoBehaviour
             flagHit.SetActive(true);
             flagNotHit.SetActive(false);
             respawnPoint = transform.position;
+            respawnPoint.z = -1;
         }
     }
 }

@@ -13,6 +13,8 @@ public class RobotMovement : MonoBehaviour
     public Checkpoints checkpoint;
     private Vector3 respawnPoint;
     public Animator animator;
+    public int energyBars = 3;
+    public gameOver GameOverHandler;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -72,6 +74,7 @@ public class RobotMovement : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
         Flip();
+
     }
 
     public void Landing()
@@ -130,9 +133,18 @@ public class RobotMovement : MonoBehaviour
         //currently doesn't work but with a delayed death / death screen it should resolve issue
         if (collision.tag == "Death")
         {
-            respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
+            energyBars --;
 
-            transform.position = respawnPoint;
+            if (energyBars <= 0)
+            {
+                gameOver();
+            }
+            else
+            {
+                respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
+
+                transform.position = respawnPoint;
+            }
         }
         if (collision.tag == "horizontal")
         {
@@ -143,5 +155,9 @@ public class RobotMovement : MonoBehaviour
         {
            jumpArrow.SetActive(false);
         }
+    }
+    public void gameOver()
+    {
+        GameOverHandler.Setup();
     }
 }
