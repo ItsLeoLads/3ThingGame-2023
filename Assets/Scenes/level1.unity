@@ -1466,6 +1466,10 @@ MonoBehaviour:
   redCollision: {fileID: 1329348842}
   blueFloor: {fileID: 1329348842}
   blueCollision: {fileID: 1329348842}
+  leftArrow: {fileID: 660422724}
+  rightArrow: {fileID: 660422724}
+  upArrow: {fileID: 660422724}
+  eKey: {fileID: 660422724}
 --- !u!50 &686756767
 Rigidbody2D:
   serializedVersion: 4

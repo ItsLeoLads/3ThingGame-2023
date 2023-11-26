@@ -5587,10 +5587,14 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  redFloor: {fileID: 0}
-  redCollision: {fileID: 0}
-  blueFloor: {fileID: 0}
-  blueCollision: {fileID: 0}
+  redFloor: {fileID: 1758404621}
+  redCollision: {fileID: 1758404621}
+  blueFloor: {fileID: 1758404621}
+  blueCollision: {fileID: 1758404621}
+  leftArrow: {fileID: 1758404621}
+  rightArrow: {fileID: 1758404621}
+  upArrow: {fileID: 1758404621}
+  eKey: {fileID: 1758404621}
 --- !u!50 &1783948507
 Rigidbody2D:
   serializedVersion: 4
