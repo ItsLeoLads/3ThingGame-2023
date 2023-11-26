@@ -131,15 +131,12 @@ public class RobotMovement : MonoBehaviour
             blueCollision.SetActive(true);
         }
         //currently doesn't work but with a delayed death / death screen it should resolve issue
-        Debug.Log("1");
+        
         if (collision.tag == "Death")
         {
-<<<<<<< HEAD
             energyBars --;
-=======
             Debug.Log("2");
             respawnPoint = GameObject.Find("CheckpointCollision").GetComponent<Checkpoints>().respawnPoint;
->>>>>>> fd775451cf9bbf9d9276b3e6add4bb8ba08fe69c
 
             if (energyBars <= 0)
             {
