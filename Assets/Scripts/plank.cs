@@ -9,6 +9,8 @@ public class plank : MonoBehaviour
     [SerializeField] GameObject horizontalPlank;
     [SerializeField] GameObject verticalPlank;
 
+    [SerializeField] GameObject eKey;
+
     public void PushPlank()
     {
         if (!hasFallen)
@@ -16,6 +18,8 @@ public class plank : MonoBehaviour
             hasFallen = true;
             horizontalPlank.SetActive(true);
             verticalPlank.SetActive(false);
+
+            eKey.SetActive(false);
         }
     }
 
